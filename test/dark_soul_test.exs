@@ -27,7 +27,7 @@ defmodule Playground.DarksoulTest do
 
   describe "darksoul of generated line checking" do
     test "test when there are both names present" do
-      assert Playground.Darksoul.darksolify("minecraft", "gamming") ==
+      assert Playground.Darksoul.darksolify("minecraft", "gaming") ==
                {:ok, "minecraft is the darksoul of gaming"}
     end
 
