@@ -9,13 +9,14 @@ defmodule Playground.NoChallengeTest do
       assert NoChallenge.range(5, 5) == [5]
     end
 
-    test "range works in descending order" do
+    test "range works in descending order, when the first argument is greater than the second one" do
       assert NoChallenge.range(10, 5) == [10, 9, 8, 7, 6, 5]
       refute NoChallenge.range(10, 5) == [5, 6, 7, 8, 9, 10]
     end
 
-    test "returns an empty list if the first argument is smaller than the second one" do
-      assert NoChallenge.range(5, 10) == []
+    test "returns an ascending list if the first argument is smaller than the second one" do
+      assert NoChallenge.range(5, 10) == [5, 6, 7, 8, 9, 10]
+      refute NoChallenge.range(5, 10) == [10, 9, 8, 7, 6, 5]
     end
   end
 end
